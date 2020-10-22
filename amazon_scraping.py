@@ -1,9 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import re
-from scipy import stats
-import numpy as np
+from datetime import datetime
+
 
 item_name = []
 prices = []
@@ -27,10 +26,10 @@ for i in range(4):
         prod_name = na.find_all('img', alt=True)[0]['alt']
         # print(prod_name)
         item_name.append(prod_name)
-        prod_price = listing.find('span',attrs={'class':'p13n-sc-price'}).text
+        prod_price = "INR " + listing.find('span',attrs={'class':'p13n-sc-price'}).text[2:]
         # print(prod_price)
         prices.append(prod_price)
 
 books = pd.DataFrame({"Name": item_name, "Prices": prices})
 print(books)
-books.to_csv('AmazonBestSellingBooksOn24thAugust2020.csv')
+books.to_csv('Amazon_Best_Selling_Books_On_{}.csv'.format(datetime.today().strftime('%Y-%m-%d')),index=False)
