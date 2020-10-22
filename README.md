@@ -1,6 +1,6 @@
 # Scraping eBay and Amazon Listings and Reviews Using BeautifulSoup and Scrapy:
 ## Remark : 
-This repository also contains code to scrape Kaleidoscope Game Patterns and Solutions.
+This repository also contains code to scrape Dr.Wood's Kaleidoscope Game Patterns and Solutions.
 
 ## Usage Guide:
 
