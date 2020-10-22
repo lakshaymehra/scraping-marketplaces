@@ -25,7 +25,7 @@ scrapy runspider amazon_review.py -o customer_reviews.csv
 
 
 ### Contact :
-For any question, please contact
+For any query/feedback, please contact:
 ```
 Lakshay Mehra: mehralakshay2@gmail.com
 ```
